@@ -123,7 +123,7 @@ private extension SkeletonView {
         animation.fromValue = startLocations
         animation.toValue = endLocations
         animation.duration = movingAnimationDuration
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = movingAnimationDuration + delayBetweenAnimationLoops
