@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "SurfUtils"
-  s.version = "6.0.1"
+  s.version = "7.0.0"
   s.summary = "Contains a set of utils in subspecs"
   s.description  = <<-DESC
   Contains:
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author  = { "Alexander Kravchenkov" => "akravchenkov@surfstudio.co" }
   s.source = { :git => "https://github.com/surfstudio/ios-utils.git", :tag => "#{s.version}" }
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 
   s.subspec 'StringAttributes' do |sp|
     sp.source_files = 'Utils/Utils/String/String+Attributes.swift'
@@ -70,6 +70,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'KeyboardPresentable' do |sp|
     sp.source_files = 'Utils/Utils/KeyboardPresentable/*.swift'
+    sp.framework = 'UIKit'
+  end
+
+  s.subspec 'SkeletonView' do |sp|
+    sp.source_files = 'Utils/Utils/SkeletonView/*.swift'
     sp.framework = 'UIKit'
   end
 
