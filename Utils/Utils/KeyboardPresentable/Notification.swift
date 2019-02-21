@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Notification {
+extension NSNotification {
 
     /// Instance of this structure keeps info about keyboard from notification
     public struct KeyboardInfo {

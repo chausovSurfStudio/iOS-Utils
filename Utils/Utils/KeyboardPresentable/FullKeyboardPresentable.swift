@@ -13,20 +13,20 @@ import UIKit
 public protocol FullKeyboardPresentable: class {
 
     /// This method is called when the keyboard appears on the device screen
-    func keyboardWillBeShown(keyboardInfo: Notification.KeyboardInfo)
+    func keyboardWillBeShown(keyboardInfo: NSNotification.KeyboardInfo)
 
     /// This method is called when the keyboard disappears from the device screen
-    func keyboardWillBeHidden(keyboardInfo: Notification.KeyboardInfo)
+    func keyboardWillBeHidden(keyboardInfo: NSNotification.KeyboardInfo)
 
 }
 
 public extension FullKeyboardPresentable where Self: KeyboardObservable {
 
-    func keyboardWillBeShown(notification: Notification) {
+    func keyboardWillBeShown(notification: NSNotification) {
         keyboardWillBeShown(keyboardInfo: notification.keyboardInfo)
     }
 
-    func keyboardWillBeHidden(notification: Notification) {
+    func keyboardWillBeHidden(notification: NSNotification) {
         keyboardWillBeHidden(keyboardInfo: notification.keyboardInfo)
     }
 

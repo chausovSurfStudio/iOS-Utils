@@ -21,10 +21,10 @@ public protocol KeyboardObservable: class {
     func unsubscribeFromKeyboardNotifications()
 
     /// This method is called when the keyboard appears on the device screen
-    func keyboardWillBeShown(notification: Notification)
+    func keyboardWillBeShown(notification: NSNotification)
 
     /// This method is called when the keyboard disappears from the device screen
-    func keyboardWillBeHidden(notification: Notification)
+    func keyboardWillBeHidden(notification: NSNotification)
 
 }
 

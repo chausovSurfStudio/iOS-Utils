@@ -32,12 +32,12 @@ final class KeyboardNotificationsObserver {
     // MARK: - Internal Methods
 
     @objc
-    func keyboardWillBeShown(notification: Notification) {
+    func keyboardWillBeShown(notification: NSNotification) {
         view?.keyboardWillBeShown(notification: notification)
     }
 
     @objc
-    func keyboardWillBeHidden(notification: Notification) {
+    func keyboardWillBeHidden(notification: NSNotification) {
         view?.keyboardWillBeHidden(notification: notification)
     }
 
